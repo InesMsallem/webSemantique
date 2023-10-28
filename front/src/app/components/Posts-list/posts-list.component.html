@@ -1,0 +1,35 @@
+<div class="col-md-6">
+  <h4 class="mb-4">Posts</h4>
+  <!-- Input field for adding a new post -->
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Add a new post"
+      [(ngModel)]="newPostContent"
+    />
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="addPost()">
+        Add
+      </button>
+    </div>
+  </div>
+  <!-- List of posts -->
+  <div class="card mb-4" *ngFor="let post of posts; let i = index">
+    <div class="card-body">
+      <h5 class="card-title">{{ post.post }}</h5>
+      <div *ngIf="post.comment">
+        <p class="card-text"><strong>Comment:</strong> {{ post.comment }}</p>
+      </div>
+      <div *ngIf="post.user">
+        <p class="card-text"><strong>Posted By:</strong> {{ post.user }}</p>
+      </div>
+      <button class="btn btn-primary" >
+        Edit
+      </button>
+      <button class="btn btn-danger " (click)="deletePost(post)">
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
