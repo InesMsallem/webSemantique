@@ -272,13 +272,27 @@ Apprenez à vous protéger en ligne grâce à nos cours gratuits en cybersécuri
   <untitled-ontology-2:Notification rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#notificationOne">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </untitled-ontology-2:Notification>
+  <untitled-ontology-2:Post rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post_1698575684080">
+    <untitled-ontology-2:content>post by Ahmed</untitled-ontology-2:content>
+  </untitled-ontology-2:Post>
+  <untitled-ontology-2:Groupe rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Group_1698576998075">
+    <untitled-ontology-2:name>amg fans</untitled-ontology-2:name>
+    <untitled-ontology-2:description>we love amg</untitled-ontology-2:description>
+  </untitled-ontology-2:Groupe>
   <untitled-ontology-2:Administrator rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#admin">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </untitled-ontology-2:Administrator>
+  <untitled-ontology-2:Groupe rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Group_1698577151771">
+    <untitled-ontology-2:description>we love bmw </untitled-ontology-2:description>
+    <untitled-ontology-2:name>bmw fans</untitled-ontology-2:name>
+  </untitled-ontology-2:Groupe>
   <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#likeOne">
     <untitled-ontology-2:likedOn rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postTwo"/>
     <untitled-ontology-2:likedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Ines"/>
   </owl:NamedIndividual>
+  <untitled-ontology-2:Post rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post_1698575644475">
+    <untitled-ontology-2:content>post by Ahmed</untitled-ontology-2:content>
+  </untitled-ontology-2:Post>
   <untitled-ontology-2:Post rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post_1698528385101">
     <untitled-ontology-2:content>This is the updated content of the post.</untitled-ontology-2:content>
   </untitled-ontology-2:Post>
