@@ -1,32 +1,39 @@
 <div class="col-md-6">
+  <!-- Add buttons for filtering -->
+  <div style="margin-bottom: 20px">
+    <button
+      class="btn btn-outline-secondary mr-2"
+      (click)="filterByType('public')"
+    >
+      Show Public Groups
+    </button>
+    <button
+      class="btn btn-outline-secondary mr-2"
+      (click)="filterByType('private')"
+    >
+      Show Private Groups
+    </button>
+    <button class="btn btn-outline-secondary" (click)="showAllGroups()">
+      Show All Groups
+    </button>
+  </div>
 
-    <div class="input-group mb-3">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="search by group name"
-        [(ngModel)]="searchTerm" 
-      />
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button" (click)="searchGroups()">
-          search
-        </button>
-        <button class="btn btn-outline-secondary" type="button" (click)="getGroups()">
-            reset
-        </button>
+  <div class="card mb-4" *ngFor="let group of filteredGroups; let i = index">
+    <div class="card-body">
+      <h5 class="card-title">{{ group.group }}</h5>
+      <div *ngIf="group.name">
+        <p class="card-text"><strong>name:</strong> {{ group.name }}</p>
       </div>
-    </div>
-
-    <div class="card mb-4" *ngFor="let group of groups; let i = index">
-      <div class="card-body">
-        <h5 class="card-title">{{ group.group }}</h5>
-        <div *ngIf="group.name">
-          <p class="card-text"><strong>name:</strong> {{ group.name }}</p>
-        </div>
-        <div *ngIf="group.description">
-          <p class="card-text"><strong>description</strong> {{ group.description }}</p>
-        </div>
+      <div *ngIf="group.description">
+        <p class="card-text">
+          <strong>description</strong> {{ group.description }}
+        </p>
+      </div>
+      <div *ngIf="group.type">
+        <p class="card-text">
+          <strong>Type:</strong> {{ getTypeName(group.type) }}
+        </p>
       </div>
     </div>
   </div>
-  
+</div>
