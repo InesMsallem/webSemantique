@@ -30,4 +30,12 @@ export class TutorialService {
   deletePost(postURI: string) {
     return this.http.delete(`${this.apiBaseUrl}/deletePost?postURI=${postURI}`);
   }
+
+  //Groups
+  getGroups() {
+    return this.http.get(`${this.apiBaseUrl}/groups/all`);
+  }
+  searchGroups(name: string) {
+    return this.http.get(`${this.apiBaseUrl}/groups/all?groupName=${name}`);
+  }
 }

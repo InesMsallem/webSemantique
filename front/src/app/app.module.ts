@@ -6,11 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TutorialsListComponent } from './components/Posts-list/posts-list.component';
+import { GroupListComponent } from './components/group-list/group-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TutorialsListComponent
+    TutorialsListComponent,
+    GroupListComponent,
   ],
   imports: [
     BrowserModule,
