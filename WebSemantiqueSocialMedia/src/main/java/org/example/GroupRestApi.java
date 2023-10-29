@@ -25,7 +25,7 @@ import java.util.Map;
 public class GroupRestApi {
 
     @GetMapping("/all")
-    public ResponseEntity<List<Map<String, String>>> getGroupsData(@RequestParam(value = "groupName", required = false) String groupNameFilter) {
+    public ResponseEntity<List<Map<String, String>>> getAllGroups(@RequestParam(value = "groupName", required = false) String groupNameFilter) {
         // Load RDF data from a file
         Model model = ModelFactory.createDefaultModel();
         model.read("src/main/java/org/example/socialMedia.rdf");
@@ -33,16 +33,17 @@ public class GroupRestApi {
         // Create an OntModel that performs inference
         OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
 
-        // Define your SPARQL query
-        //String sparqlQuery = "PREFIX ex: <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?group ?groupName ?description ?userUsername WHERE { ?group a ex:Groupe; ex:name ?groupName; ex:description ?description. OPTIONAL { ?group ex:hasUser ?user. ?user foaf:name ?userUsername. } }\n";
+        // Define your SPARQL query to retrieve all groups and their subclass information
         String sparqlQuery = "PREFIX ex: <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#> " +
+                "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
                 "PREFIX foaf: <http://xmlns.com/foaf/0.1/> " +
-                "SELECT ?group ?groupName ?description ?userUsername " +
+                "SELECT DISTINCT ?group ?groupName ?description ?groupType " +
                 "WHERE { " +
-                "  ?group a ex:Groupe; " +
+                "  ?group a ?groupType; " +
                 "          ex:name ?groupName; " +
                 "          ex:description ?description. " +
-                "  OPTIONAL { ?group ex:hasUser ?user. ?user foaf:name ?userUsername. } " +
+                "  FILTER (?groupType = ex:privateGroup || ?groupType = ex:publicGroup)" +
+                "  OPTIONAL { ?group a ?subClass. } " +
                 (groupNameFilter != null ? "FILTER (str(?groupName) = '" + groupNameFilter + "')." : "") +
                 "}";
 
@@ -54,18 +55,21 @@ public class GroupRestApi {
             QuerySolution solution = resultSet.nextSolution();
             String groupName = solution.get("groupName") != null ? solution.get("groupName").toString() : null;
             String description = solution.get("description") != null ? solution.get("description").toString() : null;
+            String groupType = solution.get("groupType") != null ? solution.get("groupType").toString() : null;
 
             Map<String, String> groupMap = new HashMap<>();
             if (groupName != null) groupMap.put("name", groupName);
             if (description != null) groupMap.put("description", description);
+            if (groupType != null) groupMap.put("type", groupType);
             resultList.add(groupMap);
         }
 
         return ResponseEntity.ok(resultList);
     }
 
+
     @PostMapping("/addGroup")
-    public ResponseEntity<String> addGroup(@RequestParam("name") String name, @RequestParam("description") String description) {
+    public ResponseEntity<String> addGroup(@RequestParam("name") String name, @RequestParam("description") String description, @RequestParam("groupType") String groupType) {
         // Load RDF data from a file
         Model model = ModelFactory.createDefaultModel();
         model.read("src/main/java/org/example/socialMedia.rdf");
@@ -74,8 +78,20 @@ public class GroupRestApi {
         OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
 
         try {
+            String groupIndividualURI = "http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Group_" + System.currentTimeMillis();
+
+            // Determine the class of the group based on the groupType
+            String groupClassURI = "";
+            if ("public".equalsIgnoreCase(groupType)) {
+                groupClassURI = "http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#publicGroup";
+            } else if ("private".equalsIgnoreCase(groupType)) {
+                groupClassURI = "http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#privateGroup";
+            } else {
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid group type.");
+            }
+
             // Create a new individual representing the group
-            Individual groupIndividual = ontModel.createIndividual("http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Group_" + System.currentTimeMillis(), ontModel.getOntClass("http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Groupe"));
+            Individual groupIndividual = ontModel.createIndividual(groupIndividualURI, ontModel.getOntClass(groupClassURI));
 
             // Set the name and description of the group
             groupIndividual.addProperty(ontModel.getDatatypeProperty("http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#name"), name);
