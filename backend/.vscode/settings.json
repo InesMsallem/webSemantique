@@ -4,4 +4,8 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "redhat.java",
     "editor.tabSize": 2,
+    "extensions.recommendations": [
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-spring-boot-dashboard"
+    ]
 }
