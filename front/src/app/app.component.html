@@ -1,12 +1,17 @@
 <div>
   <nav class="navbar navbar-expand navbar-dark bg-dark col">
-    <a routerLink="tutorials"  class="navbar-brand"  style="margin-left: 50px;">Social Media</a>
+    <a routerLink="tutorials" class="navbar-brand" style="margin-left: 50px;">Social Media</a>
     <div class="navbar-nav mr-auto">
       <li class="nav-item">
         <a routerLink="home" class="nav-link">Home</a>
       </li>
       <li class="nav-item">
         <a [routerLink]="'/group'" class="nav-link">Groups</a>
+      </li>
+    </div>
+    <div class="navbar-nav ms-auto"> <!-- Use ms-auto to push items to the right -->
+      <li class="nav-item">
+        <a  class="nav-link">Logout</a>
       </li>
     </div>
   </nav>

@@ -13,6 +13,18 @@ export class TutorialService {
     return this.http.get(`${this.apiBaseUrl}/posts/all`);
   }
 
+  getPictures() {
+    return this.http.get(`${this.apiBaseUrl}/posts/pictures`);
+  }
+
+  getVideos() {
+    return this.http.get(`${this.apiBaseUrl}/posts/videos`);
+  }
+
+  getArticles() {
+    return this.http.get(`${this.apiBaseUrl}/posts/articles`);
+  }
+
   addPost(post: any) {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -31,10 +43,11 @@ export class TutorialService {
     return this.http.delete(`${this.apiBaseUrl}/deletePost?postURI=${postURI}`);
   }
 
-  //Groups
+  // Groups
   getGroups() {
     return this.http.get(`${this.apiBaseUrl}/groups/all`);
   }
+
   searchGroups(name: string) {
     return this.http.get(`${this.apiBaseUrl}/groups/all?groupName=${name}`);
   }

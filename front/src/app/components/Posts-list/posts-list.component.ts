@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TutorialService } from 'src/app/services/tutorial.service';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-tutorials-list',
@@ -7,19 +8,90 @@ import { TutorialService } from 'src/app/services/tutorial.service';
   styleUrls: ['./posts-list.component.css']
 })
 export class TutorialsListComponent implements OnInit {
-  posts: any[] = [];
-  newPostContent: string = ''; 
+  allPosts: any[] = [];
+  videoPosts: any[] = [];
+  articlePosts: any[] = [];
+  picturePosts: any[] = [];
+  newPostContent: string = '';
+  selectedPostType: string = 'All';
 
-  constructor(private tutorialService: TutorialService) {}
+  constructor(private tutorialService: TutorialService, private sanitizer: DomSanitizer) {}
 
   ngOnInit(): void {
     this.retrievePosts();
+  }
+  getFilteredPosts() {
+    if (this.selectedPostType === 'All') {
+      return this.allPosts;
+    } else if (this.selectedPostType === 'Videos') {
+      return this.videoPosts;
+    } else if (this.selectedPostType === 'Articles') {
+      return this.articlePosts;
+    } else if (this.selectedPostType === 'Pictures') {
+      return this.picturePosts;
+    }
+  }
+  
+  getVideoEmbedUrl(url: string): SafeResourceUrl {
+    const videoId = this.getVideoId(url);
+    const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+    return this.sanitizer.bypassSecurityTrustResourceUrl(embedUrl);
+  }
+  
+  getVideoId(url: string): string {
+    // Extract the video ID from the YouTube URL
+    const videoId = url.split('v=')[1];
+    return videoId;
+  }
+  onPostTypeChange() {
+    if (this.selectedPostType === 'All') {
+      this.retrievePosts(); // Reload all posts
+    } else if (this.selectedPostType === 'Videos') {
+      this.retrieveVideos();
+    } else if (this.selectedPostType === 'Articles') {
+      this.retrieveArticles();
+    } else if (this.selectedPostType === 'Pictures') {
+      this.retrievePictures();
+    }
   }
 
   retrievePosts() {
     this.tutorialService.getPosts().subscribe(
       (data: any) => {
-        this.posts = data;
+        this.allPosts = data;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
+  retrieveVideos() {
+    this.tutorialService.getVideos().subscribe(
+      (data: any) => {
+        this.videoPosts = data;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
+  retrieveArticles() {
+    this.tutorialService.getArticles().subscribe(
+      (data: any) => {
+        this.articlePosts = data;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
+  retrievePictures() {
+    this.tutorialService.getPictures().subscribe(
+      (data: any) => {
+        this.picturePosts = data;
       },
       (error) => {
         console.log(error);
@@ -35,8 +107,8 @@ export class TutorialsListComponent implements OnInit {
     this.tutorialService.addPost(newPost).subscribe(
       (data: any) => {
         console.log('New post added:', data);
-        this.newPostContent = ''; 
-        this.retrievePosts(); 
+        this.newPostContent = '';
+        this.retrievePosts();
       },
       (error) => {
         console.error('Error adding new post:', error);
@@ -52,7 +124,7 @@ export class TutorialsListComponent implements OnInit {
     this.tutorialService.updatePost(postURI, newContent).subscribe(
       (data: any) => {
         console.log('Post updated:', data);
-        this.retrievePosts(); 
+        this.retrievePosts();
       },
       (error) => {
         console.error('Error updating post:', error);
@@ -68,7 +140,7 @@ export class TutorialsListComponent implements OnInit {
     this.tutorialService.deletePost(postURI).subscribe(
       (data: any) => {
         console.log('Post deleted:', data);
-        this.retrievePosts(); 
+        this.retrievePosts();
       },
       (error) => {
         console.error('Error deleting post:', error);
