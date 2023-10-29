@@ -839,6 +839,7 @@
         <untitled-ontology-2:postedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Ines"/>
         <untitled-ontology-2:content>La cybersécurité, c&apos;est bien plus qu&apos;un mot de passe solide. 🔒
 Apprenez à vous protéger en ligne grâce à nos cours gratuits en cybersécurité.</untitled-ontology-2:content>
+        <untitled-ontology-2:likesCount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-2:likesCount>
     </owl:NamedIndividual>
     
 

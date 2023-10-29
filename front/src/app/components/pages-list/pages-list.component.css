@@ -1,0 +1,38 @@
+.list {
+    text-align: left;
+    max-width: 750px;
+    margin: auto;
+  }
+  .user-info {
+    display: flex;
+    align-items: center; /* Vertically align items */
+  }
+  
+  .user-info img {
+    margin-right: 10px;
+    margin-bottom: 10px; /* Add some spacing between the image and the username */
+  }
+  .center-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure the container takes up the full viewport height */
+  }
+  /* CSS for Like button */
+  .like-button {
+    background-color: transparent;
+    border: none;
+    color: #555;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .like-button .bi-heart {
+    font-size: 1.5rem;
+    margin-right: 0.25rem;
+  }
+  
+  .like-button:hover {
+    color: #ff6b6b;
+  }
+  

@@ -50,4 +50,9 @@ export class TutorialService {
   searchGroups(name: string) {
     return this.http.get(`${this.apiBaseUrl}/groups/all?groupName=${name}`);
   }
+
+
+  getPages() {
+    return this.http.get(`${this.apiBaseUrl}/pages/all`);
+  }
 }

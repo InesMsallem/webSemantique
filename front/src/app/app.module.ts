@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TutorialsListComponent } from './components/Posts-list/posts-list.component';
 import { GroupListComponent } from './components/group-list/group-list.component';
+import { PagesListComponent } from './components/pages-list/pages-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TutorialsListComponent,
     GroupListComponent,
+    PagesListComponent,
   ],
   imports: [
     BrowserModule,
