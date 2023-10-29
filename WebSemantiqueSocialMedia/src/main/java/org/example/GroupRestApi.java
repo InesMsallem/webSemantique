@@ -25,7 +25,7 @@ import java.util.Map;
 public class GroupRestApi {
 
     @GetMapping("/all")
-    public ResponseEntity<List<Map<String, String>>> getGroupsData() {
+    public ResponseEntity<List<Map<String, String>>> getGroupsData(@RequestParam(value = "groupName", required = false) String groupNameFilter) {
         // Load RDF data from a file
         Model model = ModelFactory.createDefaultModel();
         model.read("src/main/java/org/example/socialMedia.rdf");
@@ -34,8 +34,18 @@ public class GroupRestApi {
         OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
 
         // Define your SPARQL query
-        //String sparqlQuery = "SELECT ?group ?groupName ?description ?userUsername\n" + "WHERE {\n" + "  ?group a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Groupe>.\n" + "  ?group <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#name> ?groupName.\n" + "   ?group <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#description > ?description .\n"  + "  OPTIONAL { ?post <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n" + "    ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n" + "}";
-        String sparqlQuery = "PREFIX ex: <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?group ?groupName ?description ?userUsername WHERE { ?group a ex:Groupe; ex:name ?groupName; ex:description ?description. OPTIONAL { ?group ex:hasUser ?user. ?user foaf:name ?userUsername. } }\n";
+        //String sparqlQuery = "PREFIX ex: <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> SELECT ?group ?groupName ?description ?userUsername WHERE { ?group a ex:Groupe; ex:name ?groupName; ex:description ?description. OPTIONAL { ?group ex:hasUser ?user. ?user foaf:name ?userUsername. } }\n";
+        String sparqlQuery = "PREFIX ex: <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#> " +
+                "PREFIX foaf: <http://xmlns.com/foaf/0.1/> " +
+                "SELECT ?group ?groupName ?description ?userUsername " +
+                "WHERE { " +
+                "  ?group a ex:Groupe; " +
+                "          ex:name ?groupName; " +
+                "          ex:description ?description. " +
+                "  OPTIONAL { ?group ex:hasUser ?user. ?user foaf:name ?userUsername. } " +
+                (groupNameFilter != null ? "FILTER (str(?groupName) = '" + groupNameFilter + "')." : "") +
+                "}";
+
         QueryExecution queryExecution = QueryExecutionFactory.create(QueryFactory.create(sparqlQuery), ontModel);
         ResultSet resultSet = queryExecution.execSelect();
 
