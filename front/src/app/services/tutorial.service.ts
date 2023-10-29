@@ -9,8 +9,20 @@ export class TutorialService {
 
   constructor(private http: HttpClient) {}
 
-  getPosts() {
+ getPosts() {
     return this.http.get(`${this.apiBaseUrl}/posts/all`);
+  }
+
+  getPictures() {
+    return this.http.get(`${this.apiBaseUrl}/posts/pictures`);
+  }
+
+  getVideos() {
+    return this.http.get(`${this.apiBaseUrl}/posts/videos`);
+  }
+
+  getArticles() {
+    return this.http.get(`${this.apiBaseUrl}/posts/articles`);
   }
 
   addPost(post: any) {

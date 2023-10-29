@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 @CrossOrigin("*")
 
 @RestController
@@ -50,6 +51,99 @@ public class PostRestApi {
             Map<String, String> postMap = new HashMap<>();
             if (commentContent != null) postMap.put("comment", commentContent);
             if (postContent != null) postMap.put("post", postContent);
+            if (userUsername != null) postMap.put("user", userUsername);
+            resultList.add(postMap);
+        }
+
+        return ResponseEntity.ok(resultList);
+    }
+
+    // only videos
+    @GetMapping("/videos")
+    public ResponseEntity<List<Map<String, String>>> getVideosData() {
+        // Load RDF data from a file
+        Model model = ModelFactory.createDefaultModel();
+        model.read("src/main/java/org/example/socialMedia.rdf");
+
+        // Create an OntModel that performs inference
+        OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
+
+        // Define your SPARQL query to get only Video posts
+        String sparqlQuery = "SELECT ?video ?content ?userUsername\n" + "WHERE {\n" + "  ?video a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Video>.\n" + "  ?video <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?content.\n" + "  OPTIONAL { ?video <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n" + "    ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n" + "}";
+
+        QueryExecution queryExecution = QueryExecutionFactory.create(QueryFactory.create(sparqlQuery), ontModel);
+        ResultSet resultSet = queryExecution.execSelect();
+
+        List<Map<String, String>> resultList = new ArrayList<>();
+        while (resultSet.hasNext()) {
+            QuerySolution solution = resultSet.nextSolution();
+            String content = solution.get("content") != null ? solution.get("content").toString() : null;
+            String userUsername = solution.get("userUsername") != null ? solution.get("userUsername").toString() : null;
+
+            Map<String, String> postMap = new HashMap<>();
+            if (content != null) postMap.put("content", content);
+            if (userUsername != null) postMap.put("user", userUsername);
+            resultList.add(postMap);
+        }
+
+        return ResponseEntity.ok(resultList);
+    }
+
+    //only pictures
+    @GetMapping("/pictures")
+    public ResponseEntity<List<Map<String, String>>> getPicturesData() {
+        // Load RDF data from a file
+        Model model = ModelFactory.createDefaultModel();
+        model.read("src/main/java/org/example/socialMedia.rdf");
+
+        // Create an OntModel that performs inference
+        OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
+
+        // Define your SPARQL query to get only Picture posts
+        String sparqlQuery = "SELECT ?picture ?content ?userUsername\n" + "WHERE {\n" + "  ?picture a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Picture>.\n" + "  ?picture <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?content.\n" + "  OPTIONAL { ?picture <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n" + "    ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n" + "}";
+
+        QueryExecution queryExecution = QueryExecutionFactory.create(QueryFactory.create(sparqlQuery), ontModel);
+        ResultSet resultSet = queryExecution.execSelect();
+
+        List<Map<String, String>> resultList = new ArrayList<>();
+        while (resultSet.hasNext()) {
+            QuerySolution solution = resultSet.nextSolution();
+            String content = solution.get("content") != null ? solution.get("content").toString() : null;
+            String userUsername = solution.get("userUsername") != null ? solution.get("userUsername").toString() : null;
+
+            Map<String, String> postMap = new HashMap<>();
+            if (content != null) postMap.put("content", content);
+            if (userUsername != null) postMap.put("user", userUsername);
+            resultList.add(postMap);
+        }
+
+        return ResponseEntity.ok(resultList);
+    }
+
+    //articles
+    @GetMapping("/articles")
+    public ResponseEntity<List<Map<String, String>>> getArticlesData() {
+        // Load RDF data from a file
+        Model model = ModelFactory.createDefaultModel();
+        model.read("src/main/java/org/example/socialMedia.rdf");
+
+        // Create an OntModel that performs inference
+        OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
+
+        // Define your SPARQL query to get only Article posts
+        String sparqlQuery = "SELECT ?article ?content ?userUsername\n" + "WHERE {\n" + "  ?article a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Article>.\n" + "  ?article <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?content.\n" + "  OPTIONAL { ?article <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n" + "    ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n" + "}";
+
+        QueryExecution queryExecution = QueryExecutionFactory.create(QueryFactory.create(sparqlQuery), ontModel);
+        ResultSet resultSet = queryExecution.execSelect();
+
+        List<Map<String, String>> resultList = new ArrayList<>();
+        while (resultSet.hasNext()) {
+            QuerySolution solution = resultSet.nextSolution();
+            String content = solution.get("content") != null ? solution.get("content").toString() : null;
+            String userUsername = solution.get("userUsername") != null ? solution.get("userUsername").toString() : null;
+
+            Map<String, String> postMap = new HashMap<>();
+            if (content != null) postMap.put("content", content);
             if (userUsername != null) postMap.put("user", userUsername);
             resultList.add(postMap);
         }
