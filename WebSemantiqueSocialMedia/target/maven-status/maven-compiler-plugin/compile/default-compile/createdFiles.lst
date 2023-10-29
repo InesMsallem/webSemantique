@@ -1,3 +1,4 @@
+org\example\CommentRestApi.class
 org\example\MainApplication.class
 org\example\PostRestApi.class
 org\example\GroupRestApi.class
