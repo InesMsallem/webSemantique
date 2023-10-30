@@ -1,4 +1,9 @@
 <div style="margin-bottom: 20px">
+    <button class="btn btn-outline-secondary" style="margin-top: 20px; " (click)="fetchEvents()">
+        Fetch ALL
+    </button>
+</div>
+<div style="margin-bottom: 20px">
     <label for="selectOption">Type a date:</label>
     <input type="text" class="form-control" placeholder="Search by date" aria-label="Search by date"
             aria-describedby="basic-addon2" [(ngModel)]="date" />
