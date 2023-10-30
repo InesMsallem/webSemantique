@@ -1,0 +1,65 @@
+<div class="center-container" style="align-items: flex-start;">
+    <div class="col-md-2 left-section">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">About Me</h3>
+                <p class="card-text">
+                    I love sharing interesting posts and connecting with friends on Social Media. Join me on this
+                    platform to stay
+                    updated.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8 mx-5">
+
+        <div class="form-group mb-3" style="display: flex; align-items: center;">
+            <select id="usernameSelect" class="form-control form-control-sm" [(ngModel)]="usernameFilter"
+                style="width: 250px;">
+                <option value="">All Users</option>
+                <option *ngFor="let user of users" [value]="user.username">{{ user.username }}</option>
+            </select>&nbsp;
+            <button class="btn btn-sm btn-primary" (click)="filterComments()">Filter</button>
+        </div> <br>
+
+
+
+        <div class="card mb-4" *ngFor="let comment of filteredComments">
+            <div class="card-body">
+                <div class="user-info">
+                    <img src="../../../assets/user.jpg" width="30px" height="30px" alt="User Profile Image">
+                    <p class="user-name">{{ comment.user_name }}</p>
+                </div>
+
+                <!-- Post content based on post type -->
+                <div class="post-content">
+
+
+                    <h5 class="card-title">{{ comment.content }}</h5>
+                    <h6>Uri: {{comment.commentURI}}</h6>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-2 right-section">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Latest Updates</h3>
+                <div class="update">
+                    <p class="card-text">Just posted a new video. Check it out!</p>
+                </div>
+                <div class="update">
+                    <p class="card-text">Join our community group and share your thoughts.</p>
+                </div>
+                <div class="update">
+                    <p class="card-text">Uploading some pictures from my recent trip.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
