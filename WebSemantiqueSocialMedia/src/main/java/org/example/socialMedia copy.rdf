@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2/"
-     xml:base="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2/"
+<rdf:RDF xmlns="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2/"
+     xml:base="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:untitled-ontology-2="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2"/>
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2"/>
     
 
 
@@ -22,194 +22,194 @@
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#AttendsEvent -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#AttendsEvent -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#AttendsEvent">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Event"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#AttendsEvent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Event"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#CreatesPage -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#CreatesPage -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#CreatesPage">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Page"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#CreatesPage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Page"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#HasChat -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#HasChat -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#HasChat">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Chat"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#HasChat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Chat"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#NotifiedBy -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#NotifiedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#NotifiedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Notification"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#NotifiedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Notification"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Shares -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Shares -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Shares">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Shares">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#administredBy -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#administredBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#administredBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Groupe"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Page"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#administredBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Groupe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Page"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#belongToGroup -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#belongToGroup -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#belongToGroup">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Groupe"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#belongToGroup">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Groupe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentedBy -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Comment"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Comment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentedOn -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentedOn -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentedOn">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Comment"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentedOn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Comment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#eventOrganizer -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#eventOrganizer -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#eventOrganizer">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Event"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#eventOrganizer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Event"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#follows -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#follows -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#follows">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#follows">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#hasComment -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#hasComment -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#hasComment">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Comment"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#hasComment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Comment"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#hasFriend -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#hasFriend -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#hasFriend">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#hasFriend">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#hasProfile -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#hasProfile -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#hasProfile">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Profile"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#hasProfile">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Profile"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#invitedToEvent -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#invitedToEvent -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#invitedToEvent">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Event"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#invitedToEvent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Event"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#likedBy -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#likedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#likedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Page"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#likedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Page"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#likedOn -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#likedOn -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#likedOn">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#likedOn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#memberOf -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#memberOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#memberOf">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Groupe"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#memberOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Groupe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#participatesInEvent -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#participatesInEvent -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#participatesInEvent">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Event"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#participatesInEvent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Event"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#postedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#postedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#requestedBy -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#requestedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#requestedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Friendship"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#requestedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Friendship"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
     </owl:ObjectProperty>
     
 
@@ -225,171 +225,171 @@
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#bio -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#bio -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#bio">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#bio">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#birthday -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#birthday -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#birthday">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#birthday">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#capacity -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#capacity -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#capacity">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#capacity">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Groupe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Groupe"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#chatMessage -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#chatMessage -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#chatMessage">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#chatMessage">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#content -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#content">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#description -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#description -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#description">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#description">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#email -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#email -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#email">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#email">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#eventDate -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#eventDate -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#eventDate">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#eventDate">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#eventLocation -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#eventLocation -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#eventLocation">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#eventLocation">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#eventName -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#eventName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#eventName">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#eventName">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#frienshipStatus -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#frienshipStatus -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#frienshipStatus">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#frienshipStatus">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#groupePicture -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#groupePicture -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#groupePicture">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#groupePicture">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#likesCount -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#likesCount -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#likesCount">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#likesCount">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#location -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#location -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#location">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#location">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#name -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#name -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#name">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#name">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#notificationTime -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#notificationTime -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#notificationTime">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#notificationTime">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#pageName -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#pageName">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageName">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#pageUrl -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageUrl -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#pageUrl">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageUrl">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#profilePicture -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#profilePicture -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#profilePicture">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#profilePicture">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#timestamp -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#timestamp -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#timestamp">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#timestamp">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#username -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#username">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -406,156 +406,156 @@
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Administrator -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Administrator -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Administrator">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Administrator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Article -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Article -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Article">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Article">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Chat -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Chat -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Chat"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Chat"/>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Comment -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Comment -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Comment"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Comment"/>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Dislike -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Dislike -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Dislike">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#React"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Dislike">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#React"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Event -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Event -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Event"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Event"/>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Friendship -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Friendship -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Friendship"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Friendship"/>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Groupe -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Groupe -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Groupe"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Groupe"/>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Like -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Like -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Like">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#React"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Like">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#React"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Member -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Member -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Member">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Member">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Notification -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Notification -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Notification"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Notification"/>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Page -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Page -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Page"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Page"/>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Picture -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Picture -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Picture">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Picture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post"/>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Profile -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Profile -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Profile"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Profile"/>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#React -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#React -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#React"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#React"/>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#User"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#User"/>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Video -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Video -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Video">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Video">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#onlineEvent -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#onlineEvent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#onlineEvent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Event"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#onlineEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Event"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#onsiteEvent -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#onsiteEvent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#onsiteEvent">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Event"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#onsiteEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Event"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#privateGroup -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#privateGroup -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#privateGroup">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Groupe"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#privateGroup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Groupe"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#publicGroup -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#publicGroup -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#publicGroup">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Groupe"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#publicGroup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Groupe"/>
     </owl:Class>
     
 
@@ -571,17 +571,17 @@
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Belghith -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Belghith -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Belghith">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Member"/>
-        <untitled-ontology-2:AttendsEvent rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#EventOne"/>
-        <untitled-ontology-2:follows rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Ines"/>
-        <untitled-ontology-2:follows rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#pageOne"/>
-        <untitled-ontology-2:hasFriend rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Ines"/>
-        <untitled-ontology-2:invitedToEvent rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#EventOne"/>
-        <untitled-ontology-2:memberOf rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#groupOne"/>
-        <untitled-ontology-2:participatesInEvent rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#EventOne"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Belghith">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Member"/>
+        <untitled-ontology-2:AttendsEvent rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#EventOne"/>
+        <untitled-ontology-2:follows rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines"/>
+        <untitled-ontology-2:follows rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageOne"/>
+        <untitled-ontology-2:hasFriend rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines"/>
+        <untitled-ontology-2:invitedToEvent rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#EventOne"/>
+        <untitled-ontology-2:memberOf rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#groupOne"/>
+        <untitled-ontology-2:participatesInEvent rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#EventOne"/>
         <untitled-ontology-2:bio>Gym rat</untitled-ontology-2:bio>
         <untitled-ontology-2:birthday>20-08-1999</untitled-ontology-2:birthday>
         <untitled-ontology-2:email>ahmed.belghith@esprit.tn</untitled-ontology-2:email>
@@ -590,11 +590,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#EventOne -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#EventOne -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#EventOne">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Event"/>
-        <untitled-ontology-2:administredBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Ines"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#EventOne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Event"/>
+        <untitled-ontology-2:administredBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines"/>
         <untitled-ontology-2:eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-15T09:00:00Z</untitled-ontology-2:eventDate>
         <untitled-ontology-2:eventLocation>Mahdia</untitled-ontology-2:eventLocation>
         <untitled-ontology-2:eventName>Yoga Session</untitled-ontology-2:eventName>
@@ -602,16 +602,16 @@
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Ines -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Ines">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Member"/>
-        <untitled-ontology-2:CreatesPage rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#pageOne"/>
-        <untitled-ontology-2:Shares rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postTwo"/>
-        <untitled-ontology-2:eventOrganizer rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#EventOne"/>
-        <untitled-ontology-2:follows rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Belghith"/>
-        <untitled-ontology-2:hasFriend rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Belghith"/>
-        <untitled-ontology-2:memberOf rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#groupOne"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Member"/>
+        <untitled-ontology-2:CreatesPage rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageOne"/>
+        <untitled-ontology-2:Shares rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#postTwo"/>
+        <untitled-ontology-2:eventOrganizer rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#EventOne"/>
+        <untitled-ontology-2:follows rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Belghith"/>
+        <untitled-ontology-2:hasFriend rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Belghith"/>
+        <untitled-ontology-2:memberOf rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#groupOne"/>
         <untitled-ontology-2:bio>This world is cruel!</untitled-ontology-2:bio>
         <untitled-ontology-2:birthday>30-10-1999</untitled-ontology-2:birthday>
         <untitled-ontology-2:email>ines.msallem@esprit.tn</untitled-ontology-2:email>
@@ -620,209 +620,209 @@
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Picture1 -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Picture1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Picture1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Picture"/>
-        <untitled-ontology-2:hasComment rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentTwo"/>
-        <untitled-ontology-2:likedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Ines"/>
-        <untitled-ontology-2:postedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Belghith"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Picture1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Picture"/>
+        <untitled-ontology-2:hasComment rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentTwo"/>
+        <untitled-ontology-2:likedBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines"/>
+        <untitled-ontology-2:postedBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Belghith"/>
         <untitled-ontology-2:content>https://i0.wp.com/interactivesolutions.pk/wp-content/uploads/2022/05/Web-Development.jpg?w=845&amp;ssl=1</untitled-ontology-2:content>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post_1698528385101 -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post_1698528385101 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post_1698528385101">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Article"/>
-        <untitled-ontology-2:postedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Ines"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post_1698528385101">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Article"/>
+        <untitled-ontology-2:postedBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines"/>
         <untitled-ontology-2:content>This is the updated content of the post.</untitled-ontology-2:content>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post_1698532053401 -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post_1698532053401 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post_1698532053401">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post"/>
-        <untitled-ontology-2:postedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Belghith"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post_1698532053401">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post"/>
+        <untitled-ontology-2:postedBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Belghith"/>
         <untitled-ontology-2:content>Hello everybody</untitled-ontology-2:content>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#admin -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#admin -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#admin">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Administrator"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#admin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Administrator"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentFive -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentFive -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentFive">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Comment"/>
-        <owl:sameAs rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentFour"/>
-        <untitled-ontology-2:commentedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Ines"/>
-        <untitled-ontology-2:commentedOn rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#video2"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentFive">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Comment"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentFour"/>
+        <untitled-ontology-2:commentedBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines"/>
+        <untitled-ontology-2:commentedOn rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#video2"/>
         <untitled-ontology-2:content>video 2 comment</untitled-ontology-2:content>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentFour -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentFour -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentFour"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentFour"/>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentFour -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentFour -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentFour">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Comment"/>
-        <owl:sameAs rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentOne"/>
-        <untitled-ontology-2:commentedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Belghith"/>
-        <untitled-ontology-2:commentedOn rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#video1"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentFour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Comment"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentOne"/>
+        <untitled-ontology-2:commentedBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Belghith"/>
+        <untitled-ontology-2:commentedOn rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#video1"/>
         <untitled-ontology-2:content>content on video 1</untitled-ontology-2:content>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentOne -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentOne -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentOne"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentOne"/>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentOne -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentOne -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentOne">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Comment"/>
-        <owl:sameAs rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentThree"/>
-        <untitled-ontology-2:commentedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Ines"/>
-        <untitled-ontology-2:commentedOn rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postTwo"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentOne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Comment"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentThree"/>
+        <untitled-ontology-2:commentedBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines"/>
+        <untitled-ontology-2:commentedOn rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#postTwo"/>
         <untitled-ontology-2:content>So true</untitled-ontology-2:content>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentThree -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentThree -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentThree"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentThree"/>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentThree -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentThree -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentThree">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Comment"/>
-        <owl:sameAs rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentTwo"/>
-        <untitled-ontology-2:commentedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Belghith"/>
-        <untitled-ontology-2:commentedOn rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postOne"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentThree">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Comment"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentTwo"/>
+        <untitled-ontology-2:commentedBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Belghith"/>
+        <untitled-ontology-2:commentedOn rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#postOne"/>
         <untitled-ontology-2:content>content on post 1</untitled-ontology-2:content>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentTwo -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentTwo -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentTwo"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentTwo"/>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentTwo -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentTwo -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentTwo">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Comment"/>
-        <untitled-ontology-2:commentedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Ines"/>
-        <untitled-ontology-2:commentedOn rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Picture1"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentTwo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Comment"/>
+        <untitled-ontology-2:commentedBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines"/>
+        <untitled-ontology-2:commentedOn rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Picture1"/>
         <untitled-ontology-2:content>commentaire ines</untitled-ontology-2:content>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#friendshipOne -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#friendshipOne -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#friendshipOne">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Friendship"/>
-        <untitled-ontology-2:requestedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Belghith"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#friendshipOne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Friendship"/>
+        <untitled-ontology-2:requestedBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Belghith"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#group1 -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#group1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#group1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#publicGroup"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#group1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#publicGroup"/>
         <untitled-ontology-2:description>we love bmw</untitled-ontology-2:description>
         <untitled-ontology-2:name>bmw fans</untitled-ontology-2:name>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#group2 -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#group2 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#group2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#publicGroup"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#group2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#publicGroup"/>
         <untitled-ontology-2:description>all belote players are here</untitled-ontology-2:description>
         <untitled-ontology-2:name>belote players</untitled-ontology-2:name>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#group3 -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#group3 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#group3">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#privateGroup"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#group3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#privateGroup"/>
         <untitled-ontology-2:description>we love amg</untitled-ontology-2:description>
         <untitled-ontology-2:name>amg fans</untitled-ontology-2:name>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#group4 -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#group4 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#group4">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#privateGroup"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#group4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#privateGroup"/>
         <untitled-ontology-2:description>we love audi</untitled-ontology-2:description>
         <untitled-ontology-2:name>audi fans</untitled-ontology-2:name>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#groupOne -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#groupOne -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#groupOne">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#groupOne">
         <untitled-ontology-2:capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</untitled-ontology-2:capacity>
         <untitled-ontology-2:name>car Lovers</untitled-ontology-2:name>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#likeOne -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#likeOne -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#likeOne">
-        <untitled-ontology-2:likedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Ines"/>
-        <untitled-ontology-2:likedOn rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postTwo"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#likeOne">
+        <untitled-ontology-2:likedBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines"/>
+        <untitled-ontology-2:likedOn rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#postTwo"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#notificationOne -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#notificationOne -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#notificationOne">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Notification"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#notificationOne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Notification"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#pageOne -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageOne -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#pageOne">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Page"/>
-        <untitled-ontology-2:administredBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Ines"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageOne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Page"/>
+        <untitled-ontology-2:administredBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines"/>
         <untitled-ontology-2:likesCount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</untitled-ontology-2:likesCount>
         <untitled-ontology-2:name>Memes</untitled-ontology-2:name>
         <untitled-ontology-2:pageUrl>https://www.facebook.com/FreshMeme.eg</untitled-ontology-2:pageUrl>
@@ -830,13 +830,13 @@
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postOne -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#postOne -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postOne">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Article"/>
-        <untitled-ontology-2:hasComment rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentThree"/>
-        <untitled-ontology-2:likedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Belghith"/>
-        <untitled-ontology-2:postedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Ines"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#postOne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Article"/>
+        <untitled-ontology-2:hasComment rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentThree"/>
+        <untitled-ontology-2:likedBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Belghith"/>
+        <untitled-ontology-2:postedBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines"/>
         <untitled-ontology-2:content>La cybersécurité, c&apos;est bien plus qu&apos;un mot de passe solide. 🔒
 Apprenez à vous protéger en ligne grâce à nos cours gratuits en cybersécurité.</untitled-ontology-2:content>
         <untitled-ontology-2:likesCount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-2:likesCount>
@@ -844,35 +844,35 @@ Apprenez à vous protéger en ligne grâce à nos cours gratuits en cybersécuri
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postTwo -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#postTwo -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postTwo">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Article"/>
-        <untitled-ontology-2:hasComment rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentOne"/>
-        <untitled-ontology-2:postedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Belghith"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#postTwo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Article"/>
+        <untitled-ontology-2:hasComment rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentOne"/>
+        <untitled-ontology-2:postedBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Belghith"/>
         <untitled-ontology-2:content>The Power of Prayer is so real, don’t ever doubt it.</untitled-ontology-2:content>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#video1 -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#video1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#video1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Video"/>
-        <untitled-ontology-2:hasComment rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentFour"/>
-        <untitled-ontology-2:likedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Belghith"/>
-        <untitled-ontology-2:postedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Ines"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#video1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Video"/>
+        <untitled-ontology-2:hasComment rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentFour"/>
+        <untitled-ontology-2:likedBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Belghith"/>
+        <untitled-ontology-2:postedBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines"/>
         <untitled-ontology-2:content>https://www.youtube.com/watch?v=PxeHulyj7qc</untitled-ontology-2:content>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#video2 -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#video2 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#video2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Video"/>
-        <untitled-ontology-2:hasComment rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentFive"/>
-        <untitled-ontology-2:postedBy rdf:resource="http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Ines"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#video2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Video"/>
+        <untitled-ontology-2:hasComment rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentFive"/>
+        <untitled-ontology-2:postedBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines"/>
         <untitled-ontology-2:content>https://www.youtube.com/watch?v=nAXBPeioOyg</untitled-ontology-2:content>
     </owl:NamedIndividual>
 </rdf:RDF>

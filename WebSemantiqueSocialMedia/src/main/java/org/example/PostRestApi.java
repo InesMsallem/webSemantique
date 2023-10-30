@@ -24,244 +24,263 @@ import java.util.Map;
 @RequestMapping("/posts/")
 public class PostRestApi {
 
+  // GET
+  @GetMapping("/all")
+  public ResponseEntity<List<Map<String, String>>> getPostsData() {
+    // Load RDF data from a file
+    Model model = ModelFactory.createDefaultModel();
+    model.read("src/main/java/org/example/socialMedia.rdf");
 
-    //GET
-    @GetMapping("/all")
-    public ResponseEntity<List<Map<String, String>>> getPostsData() {
-        // Load RDF data from a file
-        Model model = ModelFactory.createDefaultModel();
-        model.read("src/main/java/org/example/socialMedia.rdf");
+    // Create an OntModel that performs inference
+    OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
 
-        // Create an OntModel that performs inference
-        OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
+    // Define your SPARQL query
+    String sparqlQuery = "SELECT ?post ?commentContent ?postContent ?userUsername\n" +
+        "WHERE {\n" + "  ?post a <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post>.\n" +
+        "  ?post <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#content> ?postContent.\n" +
+        "  OPTIONAL { ?post <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#hasComment> ?comment.\n"
+        +
+        "    ?comment <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#content> ?commentContent }.\n"
+        +
+        "  OPTIONAL { ?post <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n" +
+        "    ?user <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n"
+        + "}";
 
-        // Define your SPARQL query
-        String sparqlQuery = "SELECT ?post ?commentContent ?postContent ?userUsername\n" +
-                "WHERE {\n" + "  ?post a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post>.\n" +
-                "  ?post <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?postContent.\n" +
-                "  OPTIONAL { ?post <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#hasComment> ?comment.\n" +
-                "    ?comment <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?commentContent }.\n" +
-                "  OPTIONAL { ?post <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n" +
-                "    ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n" + "}";
+    QueryExecution queryExecution = QueryExecutionFactory.create(QueryFactory.create(sparqlQuery), ontModel);
+    ResultSet resultSet = queryExecution.execSelect();
 
-        QueryExecution queryExecution = QueryExecutionFactory.create(QueryFactory.create(sparqlQuery), ontModel);
-        ResultSet resultSet = queryExecution.execSelect();
+    List<Map<String, String>> resultList = new ArrayList<>();
+    while (resultSet.hasNext()) {
+      QuerySolution solution = resultSet.nextSolution();
+      String commentContent = solution.get("commentContent") != null ? solution.get("commentContent").toString() : null;
+      String postContent = solution.get("postContent") != null ? solution.get("postContent").toString() : null;
+      String userUsername = solution.get("userUsername") != null ? solution.get("userUsername").toString() : null;
 
-        List<Map<String, String>> resultList = new ArrayList<>();
-        while (resultSet.hasNext()) {
-            QuerySolution solution = resultSet.nextSolution();
-            String commentContent = solution.get("commentContent") != null ? solution.get("commentContent").toString() : null;
-            String postContent = solution.get("postContent") != null ? solution.get("postContent").toString() : null;
-            String userUsername = solution.get("userUsername") != null ? solution.get("userUsername").toString() : null;
-
-            Map<String, String> postMap = new HashMap<>();
-            if (commentContent != null) postMap.put("comment", commentContent);
-            if (postContent != null) postMap.put("post", postContent);
-            if (userUsername != null) postMap.put("user", userUsername);
-            resultList.add(postMap);
-        }
-
-        return ResponseEntity.ok(resultList);
+      Map<String, String> postMap = new HashMap<>();
+      if (commentContent != null)
+        postMap.put("comment", commentContent);
+      if (postContent != null)
+        postMap.put("post", postContent);
+      if (userUsername != null)
+        postMap.put("user", userUsername);
+      resultList.add(postMap);
     }
 
-    // only videos
-    @GetMapping("/videos")
-    public ResponseEntity<List<Map<String, String>>> getVideosData() {
-        // Load RDF data from a file
-        Model model = ModelFactory.createDefaultModel();
-        model.read("src/main/java/org/example/socialMedia.rdf");
+    return ResponseEntity.ok(resultList);
+  }
 
-        // Create an OntModel that performs inference
-        OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
+  // only videos
+  @GetMapping("/videos")
+  public ResponseEntity<List<Map<String, String>>> getVideosData() {
+    // Load RDF data from a file
+    Model model = ModelFactory.createDefaultModel();
+    model.read("src/main/java/org/example/socialMedia.rdf");
 
-        // Define your SPARQL query to get only Video posts
-        String sparqlQuery = "SELECT ?video ?content ?userUsername\n" +
-                "WHERE {\n" + "  ?video a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Video>.\n" +
-                "  ?video <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?content.\n" +
-                "  OPTIONAL { ?video <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n" +
-                "    ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n" + "}";
+    // Create an OntModel that performs inference
+    OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
 
-        QueryExecution queryExecution = QueryExecutionFactory.create(QueryFactory.create(sparqlQuery), ontModel);
-        ResultSet resultSet = queryExecution.execSelect();
+    // Define your SPARQL query to get only Video posts
+    String sparqlQuery = "SELECT ?video ?content ?userUsername\n" +
+        "WHERE {\n" + "  ?video a <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Video>.\n" +
+        "  ?video <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#content> ?content.\n" +
+        "  OPTIONAL { ?video <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n"
+        +
+        "    ?user <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n"
+        + "}";
 
-        List<Map<String, String>> resultList = new ArrayList<>();
-        while (resultSet.hasNext()) {
-            QuerySolution solution = resultSet.nextSolution();
-            String content = solution.get("content") != null ? solution.get("content").toString() : null;
-            String userUsername = solution.get("userUsername") != null ? solution.get("userUsername").toString() : null;
+    QueryExecution queryExecution = QueryExecutionFactory.create(QueryFactory.create(sparqlQuery), ontModel);
+    ResultSet resultSet = queryExecution.execSelect();
 
-            Map<String, String> postMap = new HashMap<>();
-            if (content != null) postMap.put("content", content);
-            if (userUsername != null) postMap.put("user", userUsername);
-            resultList.add(postMap);
-        }
+    List<Map<String, String>> resultList = new ArrayList<>();
+    while (resultSet.hasNext()) {
+      QuerySolution solution = resultSet.nextSolution();
+      String content = solution.get("content") != null ? solution.get("content").toString() : null;
+      String userUsername = solution.get("userUsername") != null ? solution.get("userUsername").toString() : null;
 
-        return ResponseEntity.ok(resultList);
+      Map<String, String> postMap = new HashMap<>();
+      if (content != null)
+        postMap.put("content", content);
+      if (userUsername != null)
+        postMap.put("user", userUsername);
+      resultList.add(postMap);
     }
 
-    //only pictures
-    @GetMapping("/pictures")
-    public ResponseEntity<List<Map<String, String>>> getPicturesData() {
-        // Load RDF data from a file
-        Model model = ModelFactory.createDefaultModel();
-        model.read("src/main/java/org/example/socialMedia.rdf");
+    return ResponseEntity.ok(resultList);
+  }
 
-        // Create an OntModel that performs inference
-        OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
+  // only pictures
+  @GetMapping("/pictures")
+  public ResponseEntity<List<Map<String, String>>> getPicturesData() {
+    // Load RDF data from a file
+    Model model = ModelFactory.createDefaultModel();
+    model.read("src/main/java/org/example/socialMedia.rdf");
 
-        // Define your SPARQL query to get only Picture posts
-        String sparqlQuery = "SELECT ?picture ?content ?userUsername\n" +
-                "WHERE {\n" + "  ?picture a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Picture>.\n" +
-                "  ?picture <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?content.\n" +
-                "  OPTIONAL { ?picture <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n" +
-                "    ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n" + "}";
+    // Create an OntModel that performs inference
+    OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
 
-        QueryExecution queryExecution = QueryExecutionFactory.create(QueryFactory.create(sparqlQuery), ontModel);
-        ResultSet resultSet = queryExecution.execSelect();
+    // Define your SPARQL query to get only Picture posts
+    String sparqlQuery = "SELECT ?picture ?content ?userUsername\n" +
+        "WHERE {\n" + "  ?picture a <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Picture>.\n"
+        +
+        "  ?picture <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#content> ?content.\n" +
+        "  OPTIONAL { ?picture <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n"
+        +
+        "    ?user <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n"
+        + "}";
 
-        List<Map<String, String>> resultList = new ArrayList<>();
-        while (resultSet.hasNext()) {
-            QuerySolution solution = resultSet.nextSolution();
-            String content = solution.get("content") != null ? solution.get("content").toString() : null;
-            String userUsername = solution.get("userUsername") != null ? solution.get("userUsername").toString() : null;
+    QueryExecution queryExecution = QueryExecutionFactory.create(QueryFactory.create(sparqlQuery), ontModel);
+    ResultSet resultSet = queryExecution.execSelect();
 
-            Map<String, String> postMap = new HashMap<>();
-            if (content != null) postMap.put("content", content);
-            if (userUsername != null) postMap.put("user", userUsername);
-            resultList.add(postMap);
-        }
+    List<Map<String, String>> resultList = new ArrayList<>();
+    while (resultSet.hasNext()) {
+      QuerySolution solution = resultSet.nextSolution();
+      String content = solution.get("content") != null ? solution.get("content").toString() : null;
+      String userUsername = solution.get("userUsername") != null ? solution.get("userUsername").toString() : null;
 
-        return ResponseEntity.ok(resultList);
+      Map<String, String> postMap = new HashMap<>();
+      if (content != null)
+        postMap.put("content", content);
+      if (userUsername != null)
+        postMap.put("user", userUsername);
+      resultList.add(postMap);
     }
 
-    //articles
-    @GetMapping("/articles")
-    public ResponseEntity<List<Map<String, String>>> getArticlesData() {
-        // Load RDF data from a file
-        Model model = ModelFactory.createDefaultModel();
-        model.read("src/main/java/org/example/socialMedia.rdf");
+    return ResponseEntity.ok(resultList);
+  }
 
-        // Create an OntModel that performs inference
-        OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
+  // articles
+  @GetMapping("/articles")
+  public ResponseEntity<List<Map<String, String>>> getArticlesData() {
+    // Load RDF data from a file
+    Model model = ModelFactory.createDefaultModel();
+    model.read("src/main/java/org/example/socialMedia.rdf");
 
-        // Define your SPARQL query to get only Article posts
-        String sparqlQuery = "SELECT ?article ?content ?userUsername\n" + "WHERE {\n" +
-                "  ?article a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Article>.\n" +
-                "  ?article <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?content.\n" +
-                "  OPTIONAL { ?article <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n" +
-                "    ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n" + "}";
+    // Create an OntModel that performs inference
+    OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
 
-        QueryExecution queryExecution = QueryExecutionFactory.create(QueryFactory.create(sparqlQuery), ontModel);
-        ResultSet resultSet = queryExecution.execSelect();
+    // Define your SPARQL query to get only Article posts
+    String sparqlQuery = "SELECT ?article ?content ?userUsername\n" + "WHERE {\n" +
+        "  ?article a <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Article>.\n" +
+        "  ?article <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#content> ?content.\n" +
+        "  OPTIONAL { ?article <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n"
+        +
+        "    ?user <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n"
+        + "}";
 
-        List<Map<String, String>> resultList = new ArrayList<>();
-        while (resultSet.hasNext()) {
-            QuerySolution solution = resultSet.nextSolution();
-            String content = solution.get("content") != null ? solution.get("content").toString() : null;
-            String userUsername = solution.get("userUsername") != null ? solution.get("userUsername").toString() : null;
+    QueryExecution queryExecution = QueryExecutionFactory.create(QueryFactory.create(sparqlQuery), ontModel);
+    ResultSet resultSet = queryExecution.execSelect();
 
-            Map<String, String> postMap = new HashMap<>();
-            if (content != null) postMap.put("content", content);
-            if (userUsername != null) postMap.put("user", userUsername);
-            resultList.add(postMap);
-        }
+    List<Map<String, String>> resultList = new ArrayList<>();
+    while (resultSet.hasNext()) {
+      QuerySolution solution = resultSet.nextSolution();
+      String content = solution.get("content") != null ? solution.get("content").toString() : null;
+      String userUsername = solution.get("userUsername") != null ? solution.get("userUsername").toString() : null;
 
-        return ResponseEntity.ok(resultList);
+      Map<String, String> postMap = new HashMap<>();
+      if (content != null)
+        postMap.put("content", content);
+      if (userUsername != null)
+        postMap.put("user", userUsername);
+      resultList.add(postMap);
     }
 
-    //ADD
-    @PostMapping("/addPost")
-    public ResponseEntity<String> addPost(@RequestParam("content") String content) {
-        // Load RDF data from a file
-        Model model = ModelFactory.createDefaultModel();
-        model.read("src/main/java/org/example/socialMedia.rdf");
+    return ResponseEntity.ok(resultList);
+  }
 
-        // Create an OntModel that performs inference
-        OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
+  // ADD
+  @PostMapping("/addPost")
+  public ResponseEntity<String> addPost(@RequestParam("content") String content) {
+    // Load RDF data from a file
+    Model model = ModelFactory.createDefaultModel();
+    model.read("src/main/java/org/example/socialMedia.rdf");
 
-        // Create a new individual representing the post
-        Individual postIndividual = ontModel.createIndividual("http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post_" + System.currentTimeMillis(), ontModel.getOntClass("http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post"));
+    // Create an OntModel that performs inference
+    OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
 
-        // Set the content of the post
-        postIndividual.addProperty(ontModel.getDatatypeProperty("http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content"), content);
+    // Create a new individual representing the post
+    Individual postIndividual = ontModel.createIndividual(
+        "http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post_" + System.currentTimeMillis(),
+        ontModel.getOntClass("http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Post"));
 
+    // Set the content of the post
+    postIndividual.addProperty(
+        ontModel.getDatatypeProperty("http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#content"),
+        content);
 
-        // Save the updated RDF data to your file or database
-        try (OutputStream outputStream = new FileOutputStream("src/main/java/org/example/socialMedia.rdf")) {
-            ontModel.write(outputStream, "RDF/XML-ABBREV");
-        } catch (IOException e) {
-            e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to add the post.");
-        }
-
-        return ResponseEntity.status(HttpStatus.CREATED).body("Post added successfully.");
+    // Save the updated RDF data to your file or database
+    try (OutputStream outputStream = new FileOutputStream("src/main/java/org/example/socialMedia.rdf")) {
+      ontModel.write(outputStream, "RDF/XML-ABBREV");
+    } catch (IOException e) {
+      e.printStackTrace();
+      return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to add the post.");
     }
 
-    //DELETE
-    @DeleteMapping("/deletePost")
-    public ResponseEntity<String> deletePost(@RequestParam("postURI") String postURI) {
-        // Load RDF data from a file
-        Model model = ModelFactory.createDefaultModel();
-        model.read("src/main/java/org/example/socialMedia.rdf");
+    return ResponseEntity.status(HttpStatus.CREATED).body("Post added successfully.");
+  }
 
-        // Create an OntModel that performs inference
-        OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
+  // DELETE
+  @DeleteMapping("/deletePost")
+  public ResponseEntity<String> deletePost(@RequestParam("postURI") String postURI) {
+    // Load RDF data from a file
+    Model model = ModelFactory.createDefaultModel();
+    model.read("src/main/java/org/example/socialMedia.rdf");
 
-        // Find the post individual based on the provided URI
-        Individual postIndividual = ontModel.getIndividual(postURI);
+    // Create an OntModel that performs inference
+    OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
 
-        if (postIndividual != null) {
-            // Delete the post individual
-            postIndividual.remove();
+    // Find the post individual based on the provided URI
+    Individual postIndividual = ontModel.getIndividual(postURI);
 
-            // Save the updated RDF data to your file or database
-            try (OutputStream outputStream = new FileOutputStream("src/main/java/org/example/socialMedia.rdf")) {
-                ontModel.write(outputStream, "RDF/XML-ABBREV");
-            } catch (IOException e) {
-                e.printStackTrace();
-                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to delete the post.");
-            }
+    if (postIndividual != null) {
+      // Delete the post individual
+      postIndividual.remove();
 
-            return ResponseEntity.status(HttpStatus.OK).body("Post deleted successfully.");
-        } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Post not found.");
-        }
+      // Save the updated RDF data to your file or database
+      try (OutputStream outputStream = new FileOutputStream("src/main/java/org/example/socialMedia.rdf")) {
+        ontModel.write(outputStream, "RDF/XML-ABBREV");
+      } catch (IOException e) {
+        e.printStackTrace();
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to delete the post.");
+      }
+
+      return ResponseEntity.status(HttpStatus.OK).body("Post deleted successfully.");
+    } else {
+      return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Post not found.");
     }
+  }
 
+  // UPDATE
+  @PutMapping("/updatePost")
+  public ResponseEntity<String> updatePost(@RequestParam("postURI") String postURI,
+      @RequestParam("newContent") String newContent) {
+    // Load RDF data from a file
+    Model model = ModelFactory.createDefaultModel();
+    model.read("src/main/java/org/example/socialMedia.rdf");
 
-    //UPDATE
-    @PutMapping("/updatePost")
-    public ResponseEntity<String> updatePost(@RequestParam("postURI") String postURI, @RequestParam("newContent") String newContent) {
-        // Load RDF data from a file
-        Model model = ModelFactory.createDefaultModel();
-        model.read("src/main/java/org/example/socialMedia.rdf");
+    // Create an OntModel that performs inference
+    OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
 
-        // Create an OntModel that performs inference
-        OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
+    // Find the post individual based on the provided URI
+    Individual postIndividual = ontModel.getIndividual(postURI);
 
-        // Find the post individual based on the provided URI
-        Individual postIndividual = ontModel.getIndividual(postURI);
+    if (postIndividual != null) {
+      // Update the content of the post
+      postIndividual.setPropertyValue(
+          ontModel.getDatatypeProperty("http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#content"),
+          ontModel.createTypedLiteral(newContent));
 
-        if (postIndividual != null) {
-            // Update the content of the post
-            postIndividual.setPropertyValue(ontModel.getDatatypeProperty("http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content"), ontModel.createTypedLiteral(newContent));
+      // Save the updated RDF data to your file or database
+      try (OutputStream outputStream = new FileOutputStream("src/main/java/org/example/socialMedia.rdf")) {
+        ontModel.write(outputStream, "RDF/XML-ABBREV");
+      } catch (IOException e) {
+        e.printStackTrace();
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to update the post.");
+      }
 
-            // Save the updated RDF data to your file or database
-            try (OutputStream outputStream = new FileOutputStream("src/main/java/org/example/socialMedia.rdf")) {
-                ontModel.write(outputStream, "RDF/XML-ABBREV");
-            } catch (IOException e) {
-                e.printStackTrace();
-                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to update the post.");
-            }
-
-            return ResponseEntity.status(HttpStatus.OK).body("Post updated successfully.");
-        } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Post not found.");
-        }
+      return ResponseEntity.status(HttpStatus.OK).body("Post updated successfully.");
+    } else {
+      return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Post not found.");
     }
+  }
 
 }
-
-
-
-

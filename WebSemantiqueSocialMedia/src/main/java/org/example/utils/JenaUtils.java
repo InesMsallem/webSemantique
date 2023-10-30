@@ -26,15 +26,20 @@ import org.apache.jena.update.UpdateRequest;
 
 public class JenaUtils {
   private static JenaUtils _instance = null;
-  public Model model;
-  public OntModel ontModel;
+  public static Model model;
+  public static OntModel ontModel;
   private QueryExecution queryExec;
-  private String rdfFile = "src/main/java/org/example/socialMedia.rdf";
+  private static String rdfFile = "src/main/java/org/example/socialMedia2.rdf";
 
   public Dataset dataset;
 
   public static String getPrefix() {
-    return "untitled-ontology-2";
+    return "http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2";
+  }
+
+  private static void loadModel() {
+    model.read(rdfFile);
+    ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
   }
 
   public JenaUtils() {
@@ -50,7 +55,8 @@ public class JenaUtils {
     if (_instance == null) {
       _instance = new JenaUtils();
     }
-    return _instance;
+    loadModel();
+    return new JenaUtils();
   }
 
   public List<Map<String, String>> executeSelect(String selectQuery, List<List<String>> fields) {

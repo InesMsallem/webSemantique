@@ -1,40 +1,53 @@
 <div class="col-md-6">
     <!-- Add buttons for filtering -->
     <div style="margin-bottom: 20px">
-      <button class="btn btn-outline-secondary" (click)="getPages()">
-        Fetch Pages
-      </button>
+        <button class="btn btn-outline-secondary" (click)="getPages()">
+            Fetch ALL Pages
+        </button>
+        <button class="btn btn-outline-primary" style="margin-left: 20px;" (click)="goToAdd()">
+            Add Page
+        </button>
+    </div>
+    <div style="margin-bottom: 20px">
+        <label for="selectOption">Select a category:</label>
+        <select class="form-control" name="category" [(ngModel)]="category" required>
+            <option value="news">News</option>
+            <option value="sports">Sports</option>
+            <option value="memes">Memes</option>
+        </select>
+        <button class="btn btn-outline-secondary" style="margin-top: 20px; " (click)="getByCategory()">
+            Fetch By Category
+        </button>
     </div>
 
     <!-- search bar bind to "keyword" -->
     <div class="input-group mb-3">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Search by name"
-        aria-label="Search by name"
-        aria-describedby="basic-addon2"
-        [(ngModel)]="keyword"
-      />
-      </div>
-  
-    <div class="card mb-4" *ngFor="let page of filteredPages; let i = index">
-      <div *ngIf="page.name" class="card-body">
-        <h5 class="card-title">{{ page.name }}</h5>
-        <div *ngIf="page.name">
-          <p class="card-text"><strong>name:</strong> {{ page.name }}</p>
-        </div>
-        <div *ngIf="page.url">
-          <p class="card-text" >
-            <strong>URL</strong> <br><a [href]="page.url">{{ page.url }}</a>
-          </p>
-        </div>
-        <div *ngIf="page.likesCount">
-          <p class="card-text">
-            <strong>Likes:</strong> {{ likes(page.likesCount) }}
-          </p>
-        </div>
-      </div>
+        <input type="text" class="form-control" placeholder="Search by name" aria-label="Search by name"
+            aria-describedby="basic-addon2" [(ngModel)]="keyword" />
     </div>
-  </div>
-  
+
+    <div class="card mb-4" *ngFor="let page of filteredPages; let i = index">
+        <div *ngIf="page.name" class="card-body">
+            <h5 class="card-title">{{ page.name }}</h5>
+            <div *ngIf="page.id">
+                <p class="card-text" style="font-size:.8rem"><strong>id:</strong> {{ page.id }}</p>
+            </div>
+            <div *ngIf="page.name">
+                <p class="card-text"><strong>Name:</strong> {{ page.name }}</p>
+            </div>
+            <div *ngIf="page.category">
+                <p class="card-text"><strong>Category:</strong> {{ page.category }}</p>
+            </div>
+            <div *ngIf="page.url">
+                <p class="card-text">
+                    <strong>URL</strong> <br><a [href]="page.url">{{ page.url }}</a>
+                </p>
+            </div>
+            <div *ngIf="page.likesCount">
+                <p class="card-text">
+                    <strong>Likes:</strong> {{ page.likesCount }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

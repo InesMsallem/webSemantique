@@ -1,0 +1,22 @@
+<!-- generate inputs for page: name, category, name, url -->
+<div class="col-md-6">
+    <div class="card mb-4">
+        <div class="card-body" style="display: flex; flex-direction: column; gap: 1rem">
+            <label for="selectOption">Type name:</label>
+            <input type="text" class="form-control" placeholder="Name" aria-label="Name" [(ngModel)]="name" required />
+            
+            <label for="selectOption">Select a category:</label>
+            <select class="form-control" name="category" [(ngModel)]="category" required>
+                <option value="news">News</option>
+                <option value="sports">Sports</option>
+                <option value="memes">Memes</option>
+            </select>
+            <label for="selectOption">Type URL:</label>
+            <input type="text" class="form-control" placeholder="URL" aria-label="URL" [(ngModel)]="url" required />
+        </div>
+    </div>
+
+    <button class="btn btn-primary" (click)="addPage()">
+        Add
+    </button>
+</div>

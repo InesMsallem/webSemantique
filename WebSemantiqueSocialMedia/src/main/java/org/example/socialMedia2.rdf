@@ -9,7 +9,55 @@
      xmlns:untitled-ontology-2="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2"/>
     
-
+    <!-- content here -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#578b">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Page"/>
+	<untitled-ontology-2:pageId>578b77cf-790f-4823-830d-39b303fdb750</untitled-ontology-2:pageId>
+	<untitled-ontology-2:pageLikesCount>0</untitled-ontology-2:pageLikesCount>
+	<untitled-ontology-2:pageCategory>news</untitled-ontology-2:pageCategory>
+	<untitled-ontology-2:pageName>CNN NEWS</untitled-ontology-2:pageName>
+	<untitled-ontology-2:pageUrl>http://facebook.com/cnn</untitled-ontology-2:pageUrl>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#3311">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Page"/>
+	<untitled-ontology-2:pageId>3311139a-e67e-4de9-af23-b8f19a01dd47</untitled-ontology-2:pageId>
+	<untitled-ontology-2:pageLikesCount>0</untitled-ontology-2:pageLikesCount>
+	<untitled-ontology-2:pageCategory></untitled-ontology-2:pageCategory>
+	<untitled-ontology-2:pageName>ANOTHER SPORTS PAGE 3</untitled-ontology-2:pageName>
+	<untitled-ontology-2:pageUrl>http://facebook.com/sports123</untitled-ontology-2:pageUrl>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#98d5">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Page"/>
+	<untitled-ontology-2:pageId>98d54e3b-a070-4187-8c83-e73af67e0e24</untitled-ontology-2:pageId>
+	<untitled-ontology-2:pageLikesCount>0</untitled-ontology-2:pageLikesCount>
+	<untitled-ontology-2:pageCategory></untitled-ontology-2:pageCategory>
+	<untitled-ontology-2:pageName></untitled-ontology-2:pageName>
+	<untitled-ontology-2:pageUrl></untitled-ontology-2:pageUrl>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#d641">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Page"/>
+	<untitled-ontology-2:pageId>d641a968-149b-4cc9-90c0-9d120dc6f618</untitled-ontology-2:pageId>
+	<untitled-ontology-2:pageLikesCount>0</untitled-ontology-2:pageLikesCount>
+	<untitled-ontology-2:pageCategory></untitled-ontology-2:pageCategory>
+	<untitled-ontology-2:pageName>NEWS</untitled-ontology-2:pageName>
+	<untitled-ontology-2:pageUrl>http://facebook.com/news</untitled-ontology-2:pageUrl>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#775b">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Page"/>
+	<untitled-ontology-2:pageId>775b3ba6-874b-4f94-9acb-115476cf1014</untitled-ontology-2:pageId>
+	<untitled-ontology-2:pageLikesCount>2</untitled-ontology-2:pageLikesCount>
+	<untitled-ontology-2:pageCategory>sports</untitled-ontology-2:pageCategory>
+	<untitled-ontology-2:pageName>Sports ESPN 2</untitled-ontology-2:pageName>
+	<untitled-ontology-2:pageUrl>https://facebook.com/</untitled-ontology-2:pageUrl>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/in�s/ontologies/2023/9/untitled-ontology-2#45a7c209-b651-4835-875b-75e694cf0bac">
+	<rdf:type rdf:resource="http://www.semanticweb.org/in�s/ontologies/2023/9/untitled-ontology-2#Page"/>
+	<untitled-ontology-2:pageId>45a7c209-b651-4835-875b-75e694cf0bac</untitled-ontology-2:pageId>
+	<untitled-ontology-2:pageLikesCount>2</untitled-ontology-2:pageLikesCount>
+	<untitled-ontology-2:pageCategory>sports</untitled-ontology-2:pageCategory>
+	<untitled-ontology-2:pageName>Sports ESPN 2</untitled-ontology-2:pageName>
+	<untitled-ontology-2:pageUrl>https://facebook.com/</untitled-ontology-2:pageUrl>
+</owl:NamedIndividual>
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -360,12 +408,35 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageName">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
+
+
+    
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageLikesCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageLikesCount">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageUrl -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageUrl">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageUrl -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageId">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+    
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageUrl -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageCategory">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -577,7 +648,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Member"/>
         <untitled-ontology-2:AttendsEvent rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#EventOne"/>
         <untitled-ontology-2:follows rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines"/>
-        <untitled-ontology-2:follows rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageOne"/>
+        <untitled-ontology-2:follows rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#page1"/>
         <untitled-ontology-2:hasFriend rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines"/>
         <untitled-ontology-2:invitedToEvent rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#EventOne"/>
         <untitled-ontology-2:memberOf rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#groupOne"/>
@@ -606,7 +677,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines">
         <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Member"/>
-        <untitled-ontology-2:CreatesPage rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageOne"/>
+        <untitled-ontology-2:CreatesPage rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#page1"/>
         <untitled-ontology-2:Shares rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#postTwo"/>
         <untitled-ontology-2:eventOrganizer rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#EventOne"/>
         <untitled-ontology-2:follows rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Belghith"/>
@@ -818,14 +889,37 @@
     
 
 
-    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageOne -->
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#page1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#pageOne">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#page1">
         <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Page"/>
-        <untitled-ontology-2:administredBy rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Ines"/>
-        <untitled-ontology-2:likesCount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</untitled-ontology-2:likesCount>
-        <untitled-ontology-2:name>Memes</untitled-ontology-2:name>
+        <untitled-ontology-2:pageId>abcdefg-123456-hijklmnop-1</untitled-ontology-2:pageId>
+        <untitled-ontology-2:pageLikesCount>2</untitled-ontology-2:pageLikesCount>
+        <untitled-ontology-2:pageCategory>memes</untitled-ontology-2:pageCategory>
+        <untitled-ontology-2:pageName>Fresh Memes</untitled-ontology-2:pageName>
         <untitled-ontology-2:pageUrl>https://www.facebook.com/FreshMeme.eg</untitled-ontology-2:pageUrl>
+    </owl:NamedIndividual>
+    
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#page2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#page2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Page"/>
+        <untitled-ontology-2:pageId>abcdefg-123456-hijklmnop-2</untitled-ontology-2:pageId>
+        <untitled-ontology-2:pageLikesCount>205</untitled-ontology-2:pageLikesCount>
+        <untitled-ontology-2:pageCategory>news</untitled-ontology-2:pageCategory>
+        <untitled-ontology-2:pageName>Fox News</untitled-ontology-2:pageName>
+        <untitled-ontology-2:pageUrl>https://www.facebook.com/FoxNews</untitled-ontology-2:pageUrl>
+    </owl:NamedIndividual>
+    
+    <!-- http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#page3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#page3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Page"/>
+        <untitled-ontology-2:pageId>abcdefg-123456-hijklmnop-3</untitled-ontology-2:pageId>
+        <untitled-ontology-2:pageLikesCount>500</untitled-ontology-2:pageLikesCount>
+        <untitled-ontology-2:pageCategory>memes</untitled-ontology-2:pageCategory>
+        <untitled-ontology-2:pageName>Funny crusty memes for the people</untitled-ontology-2:pageName>
+        <untitled-ontology-2:pageUrl>https://www.facebook.com/memes</untitled-ontology-2:pageUrl>
     </owl:NamedIndividual>
     
 

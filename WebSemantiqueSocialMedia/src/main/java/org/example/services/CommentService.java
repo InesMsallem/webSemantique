@@ -27,12 +27,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class CommentService {
   public List<?> getAll() {
     String query = "SELECT ?comment ?commentContent ?userUsername WHERE {\n" +
-        "  ?comment a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Comment>.\n" +
-        "  ?comment <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?commentContent.\n"
+        "  ?comment a <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Comment>.\n" +
+        "  ?comment <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#content> ?commentContent.\n"
         +
-        "  OPTIONAL { ?comment <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentedBy> ?user.\n"
+        "  OPTIONAL { ?comment <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentedBy> ?user.\n"
         +
-        "             ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n"
+        "             ?user <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n"
         +
         "}";
 
@@ -62,11 +62,11 @@ public class CommentService {
 
   public List<?> getByUser(String username) {
     String query = "SELECT ?comment ?commentContent ?userUsername WHERE {\n" +
-        "  ?comment a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Comment>.\n" +
-        "  ?comment <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?commentContent.\n"
+        "  ?comment a <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Comment>.\n" +
+        "  ?comment <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#content> ?commentContent.\n"
         +
-        "  ?comment <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentedBy> ?user.\n" +
-        "  ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername.\n" +
+        "  ?comment <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentedBy> ?user.\n" +
+        "  ?user <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#username> ?userUsername.\n" +
         "  FILTER (str(?userUsername) = '" + username + "').\n" +
         "}";
 
@@ -108,18 +108,18 @@ public class CommentService {
 
   // // Create a new comment individual
   // Individual commentIndividual = ontModel.createIndividual(
-  // "http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Comment_"
+  // "http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Comment_"
   // + System.currentTimeMillis(),
-  // ontModel.getOntClass("http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Comment"));
+  // ontModel.getOntClass("http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Comment"));
 
   // // Add content property to the comment
   // commentIndividual.addProperty(
-  // ontModel.getDatatypeProperty("http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content"),
+  // ontModel.getDatatypeProperty("http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#content"),
   // content);
 
   // // Use SPARQL query to retrieve the user individual based on user_name
   // String sparqlUserQuery = "SELECT ?user WHERE { ?user
-  // <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username>
+  // <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#username>
   // \""
   // + userName + "\". }";
   // QueryExecution userQueryExecution =
@@ -132,13 +132,13 @@ public class CommentService {
 
   // // Link the comment to the user (commentedBy property)
   // commentIndividual.addProperty(ontModel.getObjectProperty(
-  // "http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentedBy"),
+  // "http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentedBy"),
   // userNode);
 
   // // Link the comment to the commentedOn resource (commentedOn property)
   // commentIndividual.addProperty(
   // ontModel
-  // .getObjectProperty("http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#commentedOn"),
+  // .getObjectProperty("http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#commentedOn"),
   // ontModel.getResource(commentedOnURI));
 
   // try (OutputStream outputStream = new

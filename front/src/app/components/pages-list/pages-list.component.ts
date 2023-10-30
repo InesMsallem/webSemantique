@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TutorialService } from 'src/app/services/tutorial.service';
 
 @Component({
@@ -12,10 +13,16 @@ export class PagesListComponent implements OnInit {
 
   keyword = '';
 
-  constructor(private tutorialService: TutorialService) { }
+  category = 'news';
+
+  constructor(private tutorialService: TutorialService, private router: Router) { }
 
   ngOnInit() {
     // this.getPages();
+  }
+
+  goToAdd() {
+    this.router.navigate(["/pages/add"])
   }
 
   get filteredPages() {
@@ -29,14 +36,24 @@ export class PagesListComponent implements OnInit {
       return name.includes(keyword) || url.includes(keyword);
     });
   }
-
-  likes(likesCount) {
-    // likesCount attr is in the form:  2^^http://www.w3.org/2001/XMLSchema#decimal, remove the ^^http://www.w3.org/2001/XMLSchema#decimal
-    return likesCount.split('^^')[0];
-  }
-
+  
   getPages() {
     this.tutorialService.getPages().subscribe(
+      (data: any) => {
+        // some pages have no data, remove them
+        data = data.filter(page => page.name != null);
+        this.pages = data;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
+  getByCategory() {
+    if (this.category == '')
+        return alert("Please put category");
+    this.tutorialService.getPageByCat(this.category).subscribe(
       (data: any) => {
         // some pages have no data, remove them
         data = data.filter(page => page.name != null);

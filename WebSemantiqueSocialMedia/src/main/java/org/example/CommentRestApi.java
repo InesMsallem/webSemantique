@@ -45,7 +45,7 @@ public class CommentRestApi {
 
   @GetMapping("/dataByResourceType")
   public ResponseEntity<List<Map<String, String>>> getDataByResourceType(
-          @RequestParam("resourceType") String resourceType) {
+      @RequestParam("resourceType") String resourceType) {
 
     Model model = ModelFactory.createDefaultModel();
     model.read("src/main/java/org/example/socialMedia.rdf");
@@ -54,16 +54,16 @@ public class CommentRestApi {
 
     // Define SPARQL prefixes
     String prefixes = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
-            + "PREFIX ex: <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#>\n";
+        + "PREFIX ex: <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#>\n";
 
     // Define a SPARQL query template
     String sparqlQueryTemplate = "SELECT ?resource ?content ?userUsername\n" +
-            "WHERE {\n" +
-            "  ?resource a ex:{{resourceType}}.\n" +
-            "  ?resource ex:content ?content.\n" +
-            "  OPTIONAL { ?resource ex:postedBy ?user.\n" +
-            "             ?user ex:username ?userUsername }.\n" +
-            "}";
+        "WHERE {\n" +
+        "  ?resource a ex:{{resourceType}}.\n" +
+        "  ?resource ex:content ?content.\n" +
+        "  OPTIONAL { ?resource ex:postedBy ?user.\n" +
+        "             ?user ex:username ?userUsername }.\n" +
+        "}";
 
     // Replace {{resourceType}} with the actual resource type
     String sparqlQuery = sparqlQueryTemplate.replace("{{resourceType}}", resourceType);
@@ -79,15 +79,16 @@ public class CommentRestApi {
       String userUsername = solution.get("userUsername") != null ? solution.get("userUsername").toString() : null;
 
       Map<String, String> resourceMap = new HashMap<>();
-      if (resourceURI != null) resourceMap.put("resourceURI", resourceURI);
-      if (content != null) resourceMap.put("content", content);
-      if (userUsername != null) resourceMap.put("user_name", userUsername);
+      if (resourceURI != null)
+        resourceMap.put("resourceURI", resourceURI);
+      if (content != null)
+        resourceMap.put("content", content);
+      if (userUsername != null)
+        resourceMap.put("user_name", userUsername);
       resultList.add(resourceMap);
     }
 
     return ResponseEntity.ok(resultList);
   }
-
-
 
 }

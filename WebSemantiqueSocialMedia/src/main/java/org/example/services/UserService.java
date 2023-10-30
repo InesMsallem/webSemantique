@@ -13,13 +13,13 @@ public class UserService {
     String query = "SELECT ?individual ?bio ?email ?username\n" +
         "WHERE {\n" +
         "  ?individual a ?type.\n" +
-        "  FILTER (?type = <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Member> || ?type = <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Administrator>).\n"
+        "  FILTER (?type = <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Member> || ?type = <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Administrator>).\n"
         +
-        "  OPTIONAL { ?individual <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#bio> ?bio }\n"
+        "  OPTIONAL { ?individual <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#bio> ?bio }\n"
         +
-        "  OPTIONAL { ?individual <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#email> ?email }\n"
+        "  OPTIONAL { ?individual <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#email> ?email }\n"
         +
-        "  OPTIONAL { ?individual <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?username }\n"
+        "  OPTIONAL { ?individual <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#username> ?username }\n"
         +
         "}";
 

@@ -5,12 +5,14 @@ import { GroupListComponent } from "./components/group-list/group-list.component
 import { PagesListComponent } from "./components/pages-list/pages-list.component";
 import { CommentListComponent } from "./components/comment-list/comment-list.component";
 import { EventListComponent } from "./components/event-list/event-list.component";
+import { PagesAddComponent } from "./components/pages-list/pages-add/pages-add.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "group", component: GroupListComponent },
   { path: "comments", component: CommentListComponent },
   { path: "pages", component: PagesListComponent },
+  { path: "pages/add", component: PagesAddComponent },
   { path: "home", component: TutorialsListComponent },
   { path: "event", component: EventListComponent },
 ];

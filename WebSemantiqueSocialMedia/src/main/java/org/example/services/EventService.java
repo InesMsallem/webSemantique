@@ -11,12 +11,12 @@ public class EventService {
   public List<?> getAll() {
     String query = "SELECT ?individual ?eventName ?eventLocation ?eventDate\n" +
         "WHERE {\n" +
-        "  ?individual a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Event>.\n" +
-        "  OPTIONAL { ?individual <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#eventName> ?eventName }\n"
+        "  ?individual a <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Event>.\n" +
+        "  OPTIONAL { ?individual <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#eventName> ?eventName }\n"
         +
-        "  OPTIONAL { ?individual <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#eventLocation> ?eventLocation }\n"
+        "  OPTIONAL { ?individual <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#eventLocation> ?eventLocation }\n"
         +
-        "  OPTIONAL { ?individual <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#eventDate> ?eventDate }\n"
+        "  OPTIONAL { ?individual <http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#eventDate> ?eventDate }\n"
         +
         "}";
 

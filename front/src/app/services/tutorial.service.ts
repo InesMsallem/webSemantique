@@ -62,6 +62,13 @@ export class TutorialService {
     return this.http.get(`${this.apiBaseUrl}/pages/all`);
   }
 
+  getPageByCat(category: any) {
+    return this.http.get(`${this.apiBaseUrl}/pages/category/${category}`)
+  }
+
+  addPage(page: any) {
+    return this.http.post(`${this.apiBaseUrl}/pages`, page)
+  }
   //Comments
   getComments() {
     return this.http.get(`${this.apiBaseUrl}/comments/all`);
