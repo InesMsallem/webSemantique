@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { TutorialsListComponent } from './components/Posts-list/posts-list.component';
 import { GroupListComponent } from './components/group-list/group-list.component';
 import { PagesListComponent } from './components/pages-list/pages-list.component';
+import { CommentListComponent } from './components/comment-list/comment-list.component';
+import { EventListComponent } from './components/event-list/event-list.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { PagesListComponent } from './components/pages-list/pages-list.component
     TutorialsListComponent,
     GroupListComponent,
     PagesListComponent,
+    CommentListComponent,
+    EventListComponent,
   ],
   imports: [
     BrowserModule,

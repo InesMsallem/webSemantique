@@ -1,15 +1,15 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from "@angular/core";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class TutorialService {
-  private apiBaseUrl = 'http://localhost:8088';
+  private apiBaseUrl = "http://localhost:8088";
 
   constructor(private http: HttpClient) {}
 
- getPosts() {
+  getPosts() {
     return this.http.get(`${this.apiBaseUrl}/posts/all`);
   }
 
@@ -28,15 +28,22 @@ export class TutorialService {
   addPost(post: any) {
     const httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type': 'application/x-www-form-urlencoded'
-      })
+        "Content-Type": "application/x-www-form-urlencoded",
+      }),
     };
 
-    return this.http.post(`${this.apiBaseUrl}/posts/addPost`, post, httpOptions);
+    return this.http.post(
+      `${this.apiBaseUrl}/posts/addPost`,
+      post,
+      httpOptions
+    );
   }
 
   updatePost(postURI: string, newContent: string) {
-    return this.http.put(`${this.apiBaseUrl}/updatePost?postURI=${postURI}&newContent=${newContent}`, {});
+    return this.http.put(
+      `${this.apiBaseUrl}/updatePost?postURI=${postURI}&newContent=${newContent}`,
+      {}
+    );
   }
 
   deletePost(postURI: string) {
@@ -51,8 +58,25 @@ export class TutorialService {
     return this.http.get(`${this.apiBaseUrl}/groups/all?groupName=${name}`);
   }
 
-
   getPages() {
     return this.http.get(`${this.apiBaseUrl}/pages/all`);
+  }
+
+  //Comments
+  getComments() {
+    return this.http.get(`${this.apiBaseUrl}/comments/all`);
+  }
+  getCommentsByUserName(username: string) {
+    return this.http.get(
+      `${this.apiBaseUrl}/comments/byUser?username=${username}`
+    );
+  }
+
+  getUsers() {
+    return this.http.get(`${this.apiBaseUrl}/users/all`);
+  }
+
+  getEvents() {
+    return this.http.get(`${this.apiBaseUrl}/events/all`);
   }
 }

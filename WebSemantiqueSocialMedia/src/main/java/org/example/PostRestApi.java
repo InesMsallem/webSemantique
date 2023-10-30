@@ -36,7 +36,13 @@ public class PostRestApi {
         OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
 
         // Define your SPARQL query
-        String sparqlQuery = "SELECT ?post ?commentContent ?postContent ?userUsername\n" + "WHERE {\n" + "  ?post a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post>.\n" + "  ?post <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?postContent.\n" + "  OPTIONAL { ?post <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#hasComment> ?comment.\n" + "    ?comment <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?commentContent }.\n" + "  OPTIONAL { ?post <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n" + "    ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n" + "}";
+        String sparqlQuery = "SELECT ?post ?commentContent ?postContent ?userUsername\n" +
+                "WHERE {\n" + "  ?post a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Post>.\n" +
+                "  ?post <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?postContent.\n" +
+                "  OPTIONAL { ?post <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#hasComment> ?comment.\n" +
+                "    ?comment <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?commentContent }.\n" +
+                "  OPTIONAL { ?post <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n" +
+                "    ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n" + "}";
 
         QueryExecution queryExecution = QueryExecutionFactory.create(QueryFactory.create(sparqlQuery), ontModel);
         ResultSet resultSet = queryExecution.execSelect();
@@ -69,7 +75,11 @@ public class PostRestApi {
         OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
 
         // Define your SPARQL query to get only Video posts
-        String sparqlQuery = "SELECT ?video ?content ?userUsername\n" + "WHERE {\n" + "  ?video a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Video>.\n" + "  ?video <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?content.\n" + "  OPTIONAL { ?video <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n" + "    ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n" + "}";
+        String sparqlQuery = "SELECT ?video ?content ?userUsername\n" +
+                "WHERE {\n" + "  ?video a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Video>.\n" +
+                "  ?video <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?content.\n" +
+                "  OPTIONAL { ?video <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n" +
+                "    ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n" + "}";
 
         QueryExecution queryExecution = QueryExecutionFactory.create(QueryFactory.create(sparqlQuery), ontModel);
         ResultSet resultSet = queryExecution.execSelect();
@@ -100,7 +110,11 @@ public class PostRestApi {
         OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
 
         // Define your SPARQL query to get only Picture posts
-        String sparqlQuery = "SELECT ?picture ?content ?userUsername\n" + "WHERE {\n" + "  ?picture a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Picture>.\n" + "  ?picture <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?content.\n" + "  OPTIONAL { ?picture <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n" + "    ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n" + "}";
+        String sparqlQuery = "SELECT ?picture ?content ?userUsername\n" +
+                "WHERE {\n" + "  ?picture a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Picture>.\n" +
+                "  ?picture <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?content.\n" +
+                "  OPTIONAL { ?picture <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n" +
+                "    ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n" + "}";
 
         QueryExecution queryExecution = QueryExecutionFactory.create(QueryFactory.create(sparqlQuery), ontModel);
         ResultSet resultSet = queryExecution.execSelect();
@@ -131,7 +145,11 @@ public class PostRestApi {
         OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
 
         // Define your SPARQL query to get only Article posts
-        String sparqlQuery = "SELECT ?article ?content ?userUsername\n" + "WHERE {\n" + "  ?article a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Article>.\n" + "  ?article <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?content.\n" + "  OPTIONAL { ?article <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n" + "    ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n" + "}";
+        String sparqlQuery = "SELECT ?article ?content ?userUsername\n" + "WHERE {\n" +
+                "  ?article a <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#Article>.\n" +
+                "  ?article <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#content> ?content.\n" +
+                "  OPTIONAL { ?article <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#postedBy> ?user.\n" +
+                "    ?user <http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#username> ?userUsername }.\n" + "}";
 
         QueryExecution queryExecution = QueryExecutionFactory.create(QueryFactory.create(sparqlQuery), ontModel);
         ResultSet resultSet = queryExecution.execSelect();

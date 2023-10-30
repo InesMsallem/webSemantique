@@ -1,18 +1,18 @@
-
 <div class="center-container" style="align-items: flex-start;">
   <div class="col-md-2 left-section">
     <div class="card">
       <div class="card-body">
         <h3 class="card-title">About Me</h3>
         <p class="card-text">
-         I love sharing interesting posts and connecting with friends on Social Media. Join me on this platform to stay updated.
+          I love sharing interesting posts and connecting with friends on Social Media. Join me on this platform to stay
+          updated.
         </p>
       </div>
     </div>
   </div>
 
   <div class="col-md-8 mx-5">
-   
+
     <div class="form-group mb-3">
       <select id="postTypeSelect" class="form-control" [(ngModel)]="selectedPostType" (change)="onPostTypeChange()">
         <option value="All">All</option>
@@ -28,23 +28,32 @@
           <img src="../../../assets/user.jpg" width="30px" height="30px" alt="User Profile Image">
           <p class="user-name">{{ post.user }}</p>
         </div>
-        
+
         <!-- Post content based on post type -->
         <div class="post-content">
-         
+
 
           <h5 class="card-title">{{ post.post }}</h5>
           <div *ngIf="selectedPostType === 'All' || selectedPostType === 'Articles'" class="post-text articles">
             <p *ngIf="post.content">{{ post.content }}</p>
           </div>
           <div *ngIf="selectedPostType === 'All' || selectedPostType === 'Videos'" class="post-video videos">
-            <iframe *ngIf="post.content && selectedPostType === 'Videos'" [src]="getVideoEmbedUrl(post.content)" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+            <iframe *ngIf="post.content && selectedPostType === 'Videos'" [src]="getVideoEmbedUrl(post.content)"
+              width="100%" height="315" frameborder="0" allowfullscreen></iframe>
           </div>
           <div *ngIf="selectedPostType === 'All' || selectedPostType === 'Pictures'" class="post-image pictures">
-            <img *ngIf="post.content && selectedPostType === 'Pictures'" [src]="post.content" alt="" width="100%" height="315">
+            <img *ngIf="post.content && selectedPostType === 'Pictures'" [src]="post.content" alt="" width="100%"
+              height="315">
           </div>
-           <!-- Like button -->
-           <div class="button-container m-2 d-flex justify-content-between">
+          <button class="btn btn-primary btn-sm" (click)="toggleComments(post)" *ngIf="selectedPostType === 'All'">
+            {{ post.showComments ? 'Hide Comments' : 'Show Comments' }}
+          </button>
+          <div class="card-footer" *ngIf="post.showComments">
+            <p>{{ post.comment }}</p>
+          </div>
+
+          <!-- Like button -->
+          <div class="button-container m-2 d-flex justify-content-between">
             <button class="btn btn-primary like-button">
               <i class="bi bi-heart"></i> Like
             </button>
@@ -52,7 +61,7 @@
               <i class="bi bi-heart"></i> Share
             </button>
           </div>
-          
+
         </div>
       </div>
     </div>
