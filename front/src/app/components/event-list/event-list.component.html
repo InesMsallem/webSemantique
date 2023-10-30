@@ -1,4 +1,15 @@
 <div class="event-list">
+    <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by date"
+          aria-label="Search by date"
+          aria-describedby="basic-addon2"
+          [(ngModel)]="date"
+        />
+        </div>
+        <div><button (click)= "fetchEventsByDate() ">fetch by date</button></div>
     <div class="card-deck">
         <div class="card" *ngFor="let event of events">
             <div class="card-body">

@@ -7,6 +7,7 @@ import { TutorialService } from "src/app/services/tutorial.service";
   styleUrls: ["./event-list.component.css"],
 })
 export class EventListComponent implements OnInit {
+  date=""
   events: any[] = [];
 
   constructor(private eventService: TutorialService) {}
@@ -17,6 +18,16 @@ export class EventListComponent implements OnInit {
 
   fetchEvents() {
     this.eventService.getEvents().subscribe(
+      (data: any) => {
+        this.events = data;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+  fetchEventsByDate(){
+    this.eventService.getEventsByDate(this.date).subscribe(
       (data: any) => {
         this.events = data;
       },

@@ -79,4 +79,8 @@ export class TutorialService {
   getEvents() {
     return this.http.get(`${this.apiBaseUrl}/events/all`);
   }
+  getEventsByDate(date: any) {
+    return this.http.get(`${this.apiBaseUrl}/events/eventsByDate/${date}`)
+  }
+
 }
