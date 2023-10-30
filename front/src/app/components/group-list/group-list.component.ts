@@ -46,9 +46,9 @@ searchGroups() {
 
 filterByType(type: string) {
   if (type === 'public') {
-    this.filteredGroups = this.allGroups.filter((group) => group.type === 'http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#publicGroup');
+    this.filteredGroups = this.allGroups.filter((group) => group.type === 'http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#publicGroup');
   } else if (type === 'private') {
-    this.filteredGroups = this.allGroups.filter((group) => group.type === 'http://www.semanticweb.org/inès/ontologies/2023/9/untitled-ontology-2#privateGroup');
+    this.filteredGroups = this.allGroups.filter((group) => group.type === 'http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#privateGroup');
   }
 }
 

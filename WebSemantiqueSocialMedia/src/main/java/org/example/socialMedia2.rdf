@@ -10,6 +10,14 @@
     <owl:Ontology rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2"/>
     
     <!-- content here -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#d0c1">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Page"/>
+	<untitled-ontology-2:pageId>d0c165d5-4584-428f-99c5-4bac7c7b4439</untitled-ontology-2:pageId>
+	<untitled-ontology-2:pageLikesCount>0</untitled-ontology-2:pageLikesCount>
+	<untitled-ontology-2:pageCategory>sports</untitled-ontology-2:pageCategory>
+	<untitled-ontology-2:pageName>Ahmed belghith</untitled-ontology-2:pageName>
+	<untitled-ontology-2:pageUrl>AhmedSports.com</untitled-ontology-2:pageUrl>
+</owl:NamedIndividual>
 <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#578b">
 	<rdf:type rdf:resource="http://www.semanticweb.org/ines/ontologies/2023/9/untitled-ontology-2#Page"/>
 	<untitled-ontology-2:pageId>578b77cf-790f-4823-830d-39b303fdb750</untitled-ontology-2:pageId>

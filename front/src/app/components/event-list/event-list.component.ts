@@ -8,8 +8,9 @@ import { TutorialService } from "src/app/services/tutorial.service";
 })
 export class EventListComponent implements OnInit {
   events: any[] = [];
+  date: string = "";
 
-  constructor(private eventService: TutorialService) {}
+  constructor(private eventService: TutorialService) { }
 
   ngOnInit(): void {
     this.fetchEvents();
@@ -24,5 +25,17 @@ export class EventListComponent implements OnInit {
         console.log(error);
       }
     );
+  }
+
+  fetchByDate() {
+    this.eventService.getEventsByDate(this.date).subscribe(
+      (data: any) => {
+        this.events = data;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+
   }
 }
